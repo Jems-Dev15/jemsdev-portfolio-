@@ -1,6 +1,3 @@
-/* =========================================================
-   GLOBAL / DOM REFERENCES
-   ========================================================= */
 const navbar = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
@@ -8,14 +5,8 @@ const navLinkItems = document.querySelectorAll(".nav-link");
 const backToTopBtn = document.getElementById("backToTop");
 const yearSpan = document.getElementById("year");
 
-/* =========================================================
-   FOOTER YEAR
-   ========================================================= */
 yearSpan.textContent = new Date().getFullYear();
 
-/* =========================================================
-   STICKY NAVBAR ON SCROLL
-   ========================================================= */
 function handleNavbarScroll() {
   if (window.scrollY > 40) {
     navbar.classList.add("scrolled");
@@ -24,9 +15,6 @@ function handleNavbarScroll() {
   }
 }
 
-/* =========================================================
-   BACK TO TOP BUTTON VISIBILITY
-   ========================================================= */
 function handleBackToTop() {
   if (window.scrollY > 500) {
     backToTopBtn.classList.add("show");
@@ -39,15 +27,11 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* =========================================================
-   MOBILE NAVIGATION MENU (HAMBURGER)
-   ========================================================= */
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   navLinks.classList.toggle("open");
 });
 
-// Close mobile menu when a nav link is clicked
 navLinkItems.forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("open");
@@ -55,11 +39,6 @@ navLinkItems.forEach((link) => {
   });
 });
 
-/* =========================================================
-   SMOOTH SCROLL NAVIGATION
-   (native CSS scroll-behavior handles most of this, but we
-   also manage active link state here)
-   ========================================================= */
 const sections = document.querySelectorAll("main section[id]");
 
 function setActiveNavLink() {
@@ -82,18 +61,12 @@ function setActiveNavLink() {
   });
 }
 
-/* =========================================================
-   COMBINED SCROLL LISTENER
-   ========================================================= */
 window.addEventListener("scroll", () => {
   handleNavbarScroll();
   handleBackToTop();
   setActiveNavLink();
 });
 
-/* =========================================================
-   TYPING TEXT ANIMATION (HERO)
-   ========================================================= */
 const typedTextEl = document.getElementById("typedText");
 const typingRoles = [
   "Web Developer",
@@ -121,20 +94,17 @@ function typeEffect() {
   let typingSpeed = isDeleting ? 45 : 90;
 
   if (!isDeleting && charIndex === currentRole.length) {
-    typingSpeed = 1400; // pause at full word
+    typingSpeed = 1400;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     roleIndex = (roleIndex + 1) % typingRoles.length;
-    typingSpeed = 400; // pause before typing next word
+    typingSpeed = 400;
   }
 
   setTimeout(typeEffect, typingSpeed);
 }
 
-/* =========================================================
-   SCROLL REVEAL ANIMATIONS (Intersection Observer)
-   ========================================================= */
 const revealElements = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver(
@@ -151,9 +121,6 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((el) => revealObserver.observe(el));
 
-/* =========================================================
-   ANIMATED SKILL PROGRESS BARS
-   ========================================================= */
 const skillsSection = document.getElementById("skills");
 const progressFills = document.querySelectorAll(".progress-fill");
 const skillPercents = document.querySelectorAll(".skill-percent");
@@ -205,9 +172,6 @@ if (skillsSection) {
   skillsObserver.observe(skillsSection);
 }
 
-/* =========================================================
-   ABOUT SECTION STAT COUNTERS
-   ========================================================= */
 const statCounters = document.querySelectorAll(".counter");
 let statsAnimated = false;
 
@@ -231,9 +195,6 @@ if (aboutStatsContainer) {
   statsObserver.observe(aboutStatsContainer);
 }
 
-/* =========================================================
-   CONTACT FORM VALIDATION
-   ========================================================= */
 const contactForm = document.getElementById("contactForm");
 const formSuccess = document.getElementById("formSuccess");
 
@@ -269,7 +230,6 @@ if (contactForm) {
     const subjectError = document.getElementById("subjectError");
     const messageError = document.getElementById("messageError");
 
-    // Full Name validation
     if (fullName.value.trim().length < 2) {
       showError(fullName, fullNameError, "Please enter your full name.");
       isValid = false;
@@ -277,7 +237,6 @@ if (contactForm) {
       clearError(fullName, fullNameError);
     }
 
-    // Email validation
     if (!isValidEmail(email.value.trim())) {
       showError(email, emailError, "Please enter a valid email address.");
       isValid = false;
@@ -285,7 +244,6 @@ if (contactForm) {
       clearError(email, emailError);
     }
 
-    // Subject validation
     if (subject.value.trim().length < 3) {
       showError(subject, subjectError, "Please enter a subject.");
       isValid = false;
@@ -293,7 +251,6 @@ if (contactForm) {
       clearError(subject, subjectError);
     }
 
-    // Message validation
     if (message.value.trim().length < 10) {
       showError(message, messageError, "Message should be at least 10 characters.");
       isValid = false;
@@ -311,7 +268,6 @@ if (contactForm) {
     }
   });
 
-  // Clear individual field errors as the user types
   ["fullName", "email", "subject", "message"].forEach((id) => {
     const field = document.getElementById(id);
     const errorEl = document.getElementById(`${id}Error`);
@@ -319,11 +275,9 @@ if (contactForm) {
   });
 }
 
-/* =========================================================
-   INITIALIZE ON PAGE LOAD
-   ========================================================= */
 window.addEventListener("DOMContentLoaded", () => {
   handleNavbarScroll();
   setActiveNavLink();
   typeEffect();
 });
+   
