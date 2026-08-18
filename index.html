@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jm Devs| Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, an aspiring full stack developer specializing in HTML, CSS, JavaScript, PHP, C and C#." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== Back to top button ===================== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===================== Navigation Bar ===================== -->
+  <header id="navbar" class="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo">Jem<span>Devs</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== Hero Section ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-text reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+ <h1 class="hero-name">Jhon Mark Santos</h1>
+          <h2 class="hero-title">
+            <span id="typedText"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-desc">
+            I'm an aspiring full stack developer with a genuine passion for programming
+            and building meaningful web experiences. I love turning ideas into clean,
+            functional code and I'm constantly learning new tools and technologies to
+            grow as a developer.
+          </p>
+          <div class="hero-buttons">
+            <a href="cv.pdf" class="btn btn-primary" download>
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image reveal">
+          <div class="image-frame">
+           <img src="jm.png" alt="Picture ko hehe" />
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== About Section ===================== -->
+    <section id="about" class="about section-padding">
+      <div class="container">
+        <p class="section-eyebrow reveal">Get to know me</p>
+        <h2 class="section-title reveal">About Me</h2>
+
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p>
+              Programming has always fascinated me &mdash; the idea that a few lines of
+              code can solve real problems and bring ideas to life keeps me hooked.
+              My interest in web development grew from wanting to build things people
+              can actually use, from simple landing pages to full-featured applications.
+            </p>
+            <p>
+              I enjoy the process of breaking down complex problems into smaller,
+              manageable pieces and finding efficient solutions. I'm a firm believer in
+              continuous learning, so I'm always exploring new languages, frameworks,
+              and best practices to sharpen my craft.
+            </p>
+            <p>
+              My goal is to grow into a well-rounded software developer, contribute to
+              impactful projects, and keep building software that makes a difference.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <h3><span class="counter" data-target="6">0</span>+</h3>
+                <p>Technologies Learned</p>
+              </div>
+              <div class="stat-card">
+                <h3><span class="counter" data-target="3">0</span>+</h3>
+                <p>Projects Built</p>
+              </div>
+              <div class="stat-card">
+                <h3><span class="counter" data-target="100">0</span>%</h3>
+                <p>Dedication</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Skills Section ===================== -->
+    <section id="skills" class="skills section-padding">
+      <div class="container">
+        <p class="section-eyebrow reveal">What I work with</p>
+        <h2 class="section-title reveal">My Skills</h2>
+
+        <div class="skills-grid">
+          <!-- HTML5 -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo" class="skill-logo" />
+              <div>
+                <h3>HTML5</h3>
+                <span class="skill-percent" data-percent="95">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="95"></div>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo" class="skill-logo" />
+              <div>
+                <h3>CSS3</h3>
+                <span class="skill-percent" data-percent="90">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="90"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" class="skill-logo" />
+              <div>
+                <h3>JavaScript</h3>
+                <span class="skill-percent" data-percent="85">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <!-- PHP -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP logo" class="skill-logo" />
+              <div>
+                <h3>PHP</h3>
+                <span class="skill-percent" data-percent="80">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="80"></div>
+            </div>
+          </div>
+
+          <!-- C -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C logo" class="skill-logo" />
+              <div>
+                <h3>C</h3>
+                <span class="skill-percent" data-percent="75">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="75"></div>
+            </div>
+          </div>
+
+          <!-- C# -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# logo" class="skill-logo" />
+              <div>
+                <h3>C#</h3>
+                <span class="skill-percent" data-percent="70">0%</span>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Projects Section ===================== -->
+    <section id="projects" class="projects section-padding">
+      <div class="container">
+        <p class="section-eyebrow reveal">A few things I've built</p>
+        <h2 class="section-title reveal">My Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="Screenshot_2026-07-01-22-43-47-020_com.teejay.trebedit.jpg" alt="Screenshot placeholder for Personal Portfolio Website project" />
+            </div>
+            <div class="project-info">
+              <h3>Personal Portfolio Website</h3>
+              <p>
+                A responsive personal portfolio built to showcase my skills, projects,
+                and experience with a modern dark-themed interface.
+              </p>
+              <div class="tech-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-small btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="school.jpg" alt="Screenshot placeholder for Student Management System project" />
+            </div>
+            <div class="project-info">
+              <h3>Students Attendance and List System</h3>
+              <p>
+                A PHP-based web application for managing students records, including
+                add, update, delete, and search functionality with a MySQL backend.
+              </p>
+              <div class="tech-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-small btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="FB_IMG_17806447815675482.jpg" alt="Screenshot placeholder for Food Ordering project" />
+            </div>
+            <div class="project-info">
+              <h3>Food Ordering System</h3>
+              <p>
+                A sleek, fully functional Food Ordering System built with vanilla JavaScript
+                that handles standard arithmetic operations with a clean UI.
+              </p>
+              <div class="tech-tags">
+                <span>JavaScript</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-small btn-primary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Contact Section ===================== -->
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <p class="section-eyebrow reveal">Let's talk</p>
+        <h2 class="section-title reveal">Contact Me</h2>
+
+        <div class="contact-content">
+          <div class="contact-info reveal">
+            <p class="contact-intro">
+              Have a project in mind, an opportunity to share, or just want to say
+              hello? My inbox is always open.
+            </p>
+
+            <ul class="contact-details">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>jhonmarksantos012@gmail.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Sto Niño, Hagonoy, Bulacan</span>
+              </li>
+            </ul>
+
+            <div class="social-icons">
+              <a href="mailto: jhonmarksantos012@gmail." aria-label="Email" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://github.com/Jems-Dev15?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.facebook.com/jhanmark.santos.56" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact-form reveal" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+              <span class="error-message" id="fullNameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Let's work together" required />
+              <span class="error-message" id="subjectError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-regular fa-paper-plane"></i> Send Message
+            </button>
+
+            <p class="form-success" id="formSuccess">Your message has been sent successfully!</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Jhon Mark Santos. All rights reserved.</p>
+      <p>Designed and Developed by <span class="highlight">Jhon Mark Santos</span></p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
